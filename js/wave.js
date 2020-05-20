@@ -1,7 +1,7 @@
 window.onload = function() {
-  let container = document.getElementById('wave2')
+  let container = document.getElementById('waveRandom')
   let bars = container.children
-  
+
   let delayArr = [0, 0.1, 0.2, 0.3, 0.4]
 
   for (let i = 0, len = bars.length; i < len; i++) {
