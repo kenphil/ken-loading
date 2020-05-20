@@ -1,0 +1,38 @@
+@keyframes shrink {
+  from {
+    transform: scale(1, 1);
+  } to {
+    transform: scale(1, 0.2);
+  }
+}
+
+#wave1, #wave2 {
+  width: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#wave1 > .bar, #wave2 > .bar {
+  width: 4px;
+  height: 32px;
+  border-radius: 4px;
+  background: #1ab91a;
+}
+
+/* 随机延迟时间在js中解决 */
+#wave1 > .bar:first-child, #wave2 > .bar:first-child {
+  animation: shrink 0.3s infinite 0s alternate;
+}
+#wave1 > .bar:nth-child(2), #wave2 > .bar:nth-child(2) {
+  animation: shrink 0.3s infinite 0.1s alternate;
+}
+#wave1 > .bar:nth-child(3), #wave2 > .bar:nth-child(3) {
+  animation: shrink 0.3s infinite 0.2s alternate;
+}
+#wave1 > .bar:nth-child(4), #wave2 > .bar:nth-child(4) {
+  animation: shrink 0.3s infinite 0.3s alternate;
+}
+#wave1 > .bar:last-child, #wave2 > .bar:last-child {
+  animation: shrink 0.3s infinite 0.4s alternate;
+}

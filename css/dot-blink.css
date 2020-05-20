@@ -1,0 +1,131 @@
+@keyframes blink {
+  from {
+    opacity: 0;
+  } to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleBlink {
+  from {
+    opacity: 0;
+    transform: scale(0, 0);
+  } to {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+
+#dotBlink {
+  width: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#dotBlink > .spin-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #1ab91a;
+  opacity: 0;
+  animation: blink 0.5s ease-in-out 0.25s alternate infinite;
+}
+
+#dotBlink > .spin-dot:first-child {
+  animation: blink 0.5s ease-in-out 0s alternate infinite;
+}
+#dotBlink > .spin-dot:last-child {
+  animation: blink 0.5s ease-in-out 0.5s alternate infinite;
+}
+
+#dotBlink2, #dotBlink3 {
+  height: 24px;
+  position: relative;
+}
+
+#dotBlink2 > .spin-container, #dotBlink3 > .spin-container {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+}
+
+#dotBlink2 > .spin-container > .spin, #dotBlink3 > .spin-container > .spin {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #1ab91a;
+  position: absolute;
+  opacity: 0;
+}
+
+#dotBlink2 > .spin-container > .spin:first-child, #dotBlink3 > .spin-container > .spin:first-child {
+  top: 0;
+  left: 0;
+}
+#dotBlink2 > .spin-container > .spin:nth-child(2), #dotBlink3 > .spin-container > .spin:nth-child(2) {
+  top: 0;
+  right: 0;
+}
+#dotBlink2 > .spin-container > .spin:nth-child(3), #dotBlink3 > .spin-container > .spin:nth-child(3) {
+  bottom: 0;
+  right: 0;
+}
+#dotBlink2 > .spin-container > .spin:last-child, #dotBlink3 > .spin-container > .spin:last-child {
+  bottom: 0;
+  left: 0;
+}
+
+#dotBlink2 > .spin-container.spin-container-2, #dotBlink3 > .spin-container.spin-container-2 {
+  transform: rotate(45deg);
+}
+
+#dotBlink2 > .spin-container.spin-container-1 > .spin:first-child {
+  animation: blink 0.6s linear 0s alternate infinite;
+}
+#dotBlink2 > .spin-container.spin-container-1 > .spin:nth-child(2) {
+  animation: blink 0.6s linear 0.3s alternate infinite;
+}
+#dotBlink2 > .spin-container.spin-container-1 > .spin:nth-child(3) {
+  animation: blink 0.6s linear 0.6s alternate infinite;
+}
+#dotBlink2 > .spin-container.spin-container-1 > .spin:last-child {
+  animation: blink 0.6s linear 0.9s alternate infinite;
+}
+#dotBlink2 > .spin-container.spin-container-2 > .spin:first-child {
+  animation: blink 0.6s linear 0.15s alternate infinite;
+}
+#dotBlink2 > .spin-container.spin-container-2 > .spin:nth-child(2) {
+  animation: blink 0.6s linear 0.45s alternate infinite;
+}
+#dotBlink2 > .spin-container.spin-container-2 > .spin:nth-child(3) {
+  animation: blink 0.6s linear 0.75s alternate infinite;
+}
+#dotBlink2 > .spin-container.spin-container-2 > .spin:last-child {
+  animation: blink 0.6s linear 1.05s alternate infinite;
+}
+
+#dotBlink3 > .spin-container.spin-container-1 > .spin:first-child {
+  animation: scaleBlink 0.6s linear 0s alternate infinite;
+}
+#dotBlink3 > .spin-container.spin-container-1 > .spin:nth-child(2) {
+  animation: scaleBlink 0.6s linear 0.3s alternate infinite;
+}
+#dotBlink3 > .spin-container.spin-container-1 > .spin:nth-child(3) {
+  animation: scaleBlink 0.6s linear 0.6s alternate infinite;
+}
+#dotBlink3 > .spin-container.spin-container-1 > .spin:last-child {
+  animation: scaleBlink 0.6s linear 0.9s alternate infinite;
+}
+#dotBlink3 > .spin-container.spin-container-2 > .spin:first-child {
+  animation: scaleBlink 0.6s linear 0.15s alternate infinite;
+}
+#dotBlink3 > .spin-container.spin-container-2 > .spin:nth-child(2) {
+  animation: scaleBlink 0.6s linear 0.45s alternate infinite;
+}
+#dotBlink3 > .spin-container.spin-container-2 > .spin:nth-child(3) {
+  animation: scaleBlink 0.6s linear 0.75s alternate infinite;
+}
+#dotBlink3 > .spin-container.spin-container-2 > .spin:last-child {
+  animation: scaleBlink 0.6s linear 1.05s alternate infinite;
+}

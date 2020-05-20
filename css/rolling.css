@@ -1,0 +1,25 @@
+@keyframes roll {
+  from {
+    transform: rotate(0deg);
+  } to {
+    transform: rotate(360deg);
+  }
+}
+
+#rolling {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-image: conic-gradient(white, #1ab91a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: roll .75s ease-out infinite;
+}
+
+#rolling > .spin-roll {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: white;
+}
